@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Kundeportal | Aron Taxi Norway</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<header id="header">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.png">
+
+<span>Aron Taxi Norway</span>
+
+</a>
+
+</div>
+
+<div class="header-buttons">
+
+<button id="notificationBtn">
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<a href="profile.html" class="login-btn">
+
+Min profil
+
+</a>
+
+</div>
+
+</header>
+
+<!-- ======================
+     DASHBOARD
+====================== -->
+
+<section class="customer-dashboard">
+
+<div class="customer-left">
+
+<h1>
+
+Hei 👋
+
+</h1>
+
+<p id="customerName">
+
+Laster bruker...
+
+</p>
+
+<div class="trip-status">
+
+<h3>Status</h3>
+
+<span id="tripStatus">
+
+Ingen aktiv bestilling
+
+</span>
+
+</div>
+
+<div class="trip-card">
+
+<h4>Hentested</h4>
+
+<p id="pickupText">
+
+-
+
+</p>
+
+<h4>Destinasjon</h4>
+
+<p id="destinationText">
+
+-
+
+</p>
+
+<h4>Pris</h4>
+
+<p id="priceText">
+
+0 kr
+
+</p>
+
+</div>
+
+<button
+id="cancelTrip"
+class="secondary-btn">
+
+Avbestill tur
+
+</button>
+
+</div>
+
+<div class="customer-right">
+<div class="driver-card" id="driverCard">
+
+    <div class="driver-top">
+
+        <img src="images/taxi.png" class="driver-image">
+
+        <div>
+
+            <h3 id="driverName">
+
+                Søker etter sjåfør...
+
+            </h3>
+
+            <p id="driverCar">
+
+                Ingen sjåfør tildelt
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="driver-info">
+
+        <div>
+
+            <span>ETA</span>
+
+            <strong id="driverEta">
+
+                --
+
+            </strong>
+
+        </div>
+
+        <div>
+
+            <span>Status</span>
+
+            <strong id="driverStatus">
+
+                Venter
+
+            </strong>
+
+        </div>
+
+    </div>
+
+    <div class="driver-buttons">
+
+        <button id="callDriver">
+
+            <i class="fa-solid fa-phone"></i>
+
+            Ring
+
+        </button>
+
+        <button id="messageDriver">
+
+            <i class="fa-solid fa-message"></i>
+
+            Melding
+
+        </button>
+
+    </div>
+
+</div>
+<div id="customerMap"></div>
+
+</div>
+
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script type="module"
+src="js/customer.js"></script>
+
+</body>
+
+</html>

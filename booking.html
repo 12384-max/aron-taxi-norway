@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bestill Taxi | Aron Taxi Norway</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<header id="header">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.png" alt="Aron Taxi">
+
+<span>Aron Taxi Norway</span>
+
+</a>
+
+</div>
+
+<nav id="navbar">
+
+<a href="index.html">Hjem</a>
+
+<a href="booking.html" class="active">Bestill</a>
+
+<a href="prices.html">Priser</a>
+
+<a href="services.html">Tjenester</a>
+
+<a href="contact.html">Kontakt</a>
+
+</nav>
+
+<div class="header-buttons">
+
+<a href="auth.html" class="login-btn">
+
+Logg inn
+
+</a>
+
+<button id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- BOOKING -->
+
+<section class="booking-page">
+
+<div class="booking-left">
+
+<h1>Bestill taxi</h1>
+
+<p>
+
+Fyll inn hentested og destinasjon.
+
+</p>
+
+<div class="booking-form">
+
+<input
+type="text"
+id="pickup"
+placeholder="📍 Hentested">
+
+<input
+type="text"
+id="destination"
+placeholder="🏁 Destinasjon">
+
+<button id="currentLocation">
+
+📍 Bruk min posisjon
+
+</button>
+
+<div class="trip-info">
+
+<div>
+
+<h4>Pris</h4>
+
+<p id="tripPrice">
+
+0 kr
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Tid</h4>
+
+<p id="tripTime">
+
+0 min
+
+</p>
+
+</div>
+
+<div>
+
+<h4>Avstand</h4>
+
+<p id="tripDistance">
+
+0 km
+
+</p>
+
+</div>
+
+</div>
+
+<button
+id="bookTaxi"
+class="primary-btn">
+
+🚖 Bestill Taxi
+
+</button>
+
+</div>
+
+</div>
+
+<div class="booking-right">
+
+<div id="map"></div>
+
+</div>
+
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="js/map.js"></script>
+
+<script type="module" src="js/booking.js"></script>
+
+</body>
+
+</html>

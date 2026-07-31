@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Aron Taxi Norway</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+<h2>👑 Aron Taxi Norway Admin</h2>
+
+<button id="logoutBtn">
+
+Logg ut
+
+</button>
+
+</header>
+
+<main class="dashboard">
+
+<div class="stat-card">
+
+<h3>Kunder</h3>
+
+<h1 id="customersCount">0</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Sjåfører</h3>
+
+<h1 id="driversCount">0</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Aktive turer</h3>
+
+<h1 id="activeTrips">0</h1>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Omsetning i dag</h3>
+
+<h1 id="todayRevenue">0 kr</h1>
+
+</div>
+
+<section class="admin-section">
+
+<h2>📦 Bestillinger</h2>
+
+<div id="bookingList">
+
+Ingen bestillinger.
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>🚖 Sjåfører Online</h2>
+
+<div id="driversList">
+
+Ingen online.
+
+</div>
+
+</section>
+
+<section class="admin-section">
+
+<h2>🗺️ Live Kart</h2>
+
+<div id="map"></div>
+
+</section>
+
+</main>
+
+<script type="module" src="js/admin.js"></script>
+<script async
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA_d40K6wevwz90fpfZLLXNfY4zO7ZPrU&libraries=places&callback=initMap">
+</script>
+</body>
+
+</html>

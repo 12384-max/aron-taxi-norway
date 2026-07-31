@@ -1,0 +1,2447 @@
+/* ==================================================
+   ARON TAXI NORWAY V2.0
+   STYLE.CSS - DEL 1
+================================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0B0F17;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ---------- FARGER ---------- */
+
+:root{
+
+    --primary:#FFC107;
+    --primary-hover:#ffcf33;
+
+    --background:#0B0F17;
+
+    --card:#161B22;
+
+    --card2:#1E2533;
+
+    --text:#ffffff;
+
+    --text2:#b9c1cf;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 15px 45px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+}
+
+/* ---------- LOADER ---------- */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0B0F17;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    transition:.5s;
+
+}
+
+#loader img{
+
+    width:130px;
+
+    animation:logoFloat 2s infinite;
+
+}
+
+@keyframes logoFloat{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ---------- HEADER ---------- */
+
+#header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 60px;
+
+    background:rgba(8,10,15,.78);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:9999;
+
+}
+
+.logo a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.logo img{
+
+    width:56px;
+
+    height:56px;
+
+}
+
+#navbar{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+#navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+#navbar a:hover,
+#navbar a.active{
+
+    color:var(--primary);
+
+}
+
+#navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+#navbar a:hover::after,
+#navbar a.active::after{
+
+    width:100%;
+
+}
+
+/* ---------- HEADER BUTTONS ---------- */
+
+.header-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.login-btn{
+
+    padding:14px 26px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(255,193,7,.35);
+
+}
+
+#menuBtn{
+
+    display:none;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--card);
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}/* ==================================================
+   HERO SECTION
+================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:140px 20px 80px;
+
+    background:
+    linear-gradient(rgba(8,10,15,.78),rgba(8,10,15,.88)),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    overflow:hidden;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,193,7,.12),
+    transparent 45%);
+
+    pointer-events:none;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+}
+
+.hero-logo{
+
+    width:170px;
+
+    margin-bottom:25px;
+
+    animation:floatLogo 5s ease-in-out infinite;
+
+}
+
+@keyframes floatLogo{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:var(--text2);
+
+}
+
+.hero-buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* BUTTONS */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-width:220px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    background:var(--primary);
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(255,193,7,.35);
+
+}
+
+.secondary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:220px;
+
+    height:60px;
+
+    border-radius:16px;
+
+    border:2px solid rgba(255,255,255,.2);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.secondary-btn:hover{
+
+    background:white;
+
+    color:#111;
+
+}
+
+/* SCROLL INDICATOR */
+
+.scroll-down{
+
+    position:absolute;
+
+    bottom:30px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:32px;
+
+    height:55px;
+
+    border:2px solid rgba(255,255,255,.4);
+
+    border-radius:30px;
+
+}
+
+.scroll-down::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:10px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:6px;
+
+    height:10px;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    animation:scrollMouse 2s infinite;
+
+}
+
+@keyframes scrollMouse{
+
+0%{
+
+opacity:1;
+
+top:10px;
+
+}
+
+100%{
+
+opacity:0;
+
+top:30px;
+
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.hero-logo{
+
+width:130px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+max-width:320px;
+
+}
+
+}/* ==================================================
+   QUICK ACTIONS
+================================================== */
+
+.quick-actions{
+
+padding:110px 7%;
+
+background:#10151F;
+
+}
+
+.section-title{
+
+text-align:center;
+
+max-width:750px;
+
+margin:auto;
+
+margin-bottom:70px;
+
+}
+
+.section-title span{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:rgba(255,193,7,.12);
+
+border:1px solid rgba(255,193,7,.25);
+
+border-radius:50px;
+
+color:var(--primary);
+
+font-size:14px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+font-size:48px;
+
+margin-bottom:18px;
+
+font-weight:800;
+
+}
+
+.section-title p{
+
+font-size:18px;
+
+color:var(--text2);
+
+line-height:1.8;
+
+}
+
+/* ========================= */
+
+.action-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px;
+
+}
+
+.action-card{
+
+position:relative;
+
+background:linear-gradient(145deg,#171C27,#121722);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:26px;
+
+padding:45px;
+
+text-decoration:none;
+
+color:white;
+
+overflow:hidden;
+
+transition:.35s;
+
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+
+.action-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-100%;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(90deg,
+transparent,
+rgba(255,255,255,.08),
+transparent);
+
+transition:.7s;
+
+}
+
+.action-card:hover::before{
+
+left:100%;
+
+}
+
+.action-card:hover{
+
+transform:translateY(-12px);
+
+border-color:rgba(255,193,7,.4);
+
+box-shadow:0 25px 60px rgba(255,193,7,.15);
+
+}
+
+.action-icon{
+
+width:80px;
+
+height:80px;
+
+border-radius:20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(255,193,7,.12);
+
+margin-bottom:30px;
+
+}
+
+.action-icon i{
+
+font-size:34px;
+
+color:var(--primary);
+
+}
+
+.action-card h3{
+
+font-size:32px;
+
+margin-bottom:18px;
+
+}
+
+.action-card p{
+
+line-height:1.8;
+
+color:var(--text2);
+
+margin-bottom:35px;
+
+}
+
+.action-card span{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+font-weight:700;
+
+color:var(--primary);
+
+}
+
+/* ========================= */
+
+.features{
+
+padding:110px 7%;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+background:#0B0F17;
+
+}
+
+.feature-card{
+
+background:#171C27;
+
+border-radius:22px;
+
+padding:40px 30px;
+
+text-align:center;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(255,193,7,.35);
+
+}
+
+.feature-card i{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+color:var(--primary);
+
+}
+
+.feature-card h3{
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+line-height:1.7;
+
+color:var(--text2);
+
+}
+
+/* ========================= */
+
+@media(max-width:1000px){
+
+.action-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+.action-card{
+
+padding:30px;
+
+}
+
+.action-card h3{
+
+font-size:26px;
+
+}
+
+}/* ==================================================
+   STATS
+================================================== */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+padding:100px 7%;
+
+background:#10151F;
+
+}
+
+.stat-box{
+
+background:#171C27;
+
+border:1px solid rgba(255,255,255,.06);
+
+border-radius:24px;
+
+padding:40px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.stat-box:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(255,193,7,.35);
+
+box-shadow:0 25px 50px rgba(0,0,0,.25);
+
+}
+
+.stat-box h2{
+
+font-size:52px;
+
+color:var(--primary);
+
+margin-bottom:12px;
+
+font-weight:800;
+
+}
+
+.stat-box p{
+
+color:var(--text2);
+
+font-size:17px;
+
+}
+
+/* ==================================================
+   CTA
+================================================== */
+
+.cta{
+
+padding:120px 7%;
+
+background:
+linear-gradient(135deg,#171C27,#10151F);
+
+text-align:center;
+
+}
+
+.cta-content{
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+.cta h2{
+
+font-size:52px;
+
+margin-bottom:25px;
+
+font-weight:800;
+
+}
+
+.cta p{
+
+font-size:20px;
+
+color:var(--text2);
+
+margin-bottom:40px;
+
+line-height:1.8;
+
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer{
+
+background:#0A0D13;
+
+padding:80px 7% 25px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+.footer-top{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:50px;
+
+margin-bottom:50px;
+
+}
+
+.footer-logo{
+
+width:75px;
+
+margin-bottom:20px;
+
+}
+
+.footer-top h3{
+
+margin-bottom:18px;
+
+font-size:22px;
+
+}
+
+.footer-top p{
+
+color:var(--text2);
+
+line-height:1.8;
+
+margin-bottom:10px;
+
+}
+
+.footer-top a{
+
+display:block;
+
+margin-bottom:12px;
+
+text-decoration:none;
+
+color:var(--text2);
+
+transition:.3s;
+
+}
+
+.footer-top a:hover{
+
+color:var(--primary);
+
+padding-left:6px;
+
+}
+
+.footer-bottom{
+
+padding-top:25px;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+text-align:center;
+
+color:var(--text2);
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:1000px){
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.footer-top{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.cta h2{
+
+font-size:34px;
+
+}
+
+.cta p{
+
+font-size:17px;
+
+}
+
+.stat-box h2{
+
+font-size:40px;
+
+}
+
+footer{
+
+padding:60px 20px 25px;
+
+}
+
+}/* ==================================================
+   STYLE.CSS - DEL 5
+   ANIMATIONS & EFFECTS
+================================================== */
+
+/* Smooth overgang */
+
+a,
+button,
+input,
+.card,
+.action-card,
+.feature-card,
+.stat-box{
+
+transition:all .3s ease;
+
+}
+
+/* Fin tekstmarkering */
+
+::selection{
+
+background:var(--primary);
+
+color:#111;
+
+}
+
+/* Tilpass scrollbar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#10151F;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#FFD54F;
+
+}
+
+/* Fade-in animasjon */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:all .8s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* Glow-effekt */
+
+.glow{
+
+box-shadow:0 0 30px rgba(255,193,7,.25);
+
+}
+
+/* Bilder */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+user-select:none;
+
+}
+
+/* Fokus */
+
+button:focus,
+a:focus,
+input:focus{
+
+outline:none;
+
+}
+
+/* Mobil */
+
+@media(max-width:768px){
+
+body{
+
+font-size:15px;
+
+}
+
+section{
+
+padding-left:20px;
+
+padding-right:20px;
+
+}
+
+.primary-btn,
+.secondary-btn{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.hero-buttons{
+
+width:100%;
+
+}
+
+}
+
+/* Store skjermer */
+
+@media(min-width:1600px){
+
+.hero-content{
+
+max-width:1200px;
+
+}
+
+.hero h1{
+
+font-size:90px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+}
+
+}/* ==========================================
+   APP.JS DEL 2
+========================================== */
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:all .8s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}/* ==========================================
+   APP.JS DEL 3
+========================================== */
+
+.toast{
+
+position:fixed;
+
+top:30px;
+
+right:30px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:18px 20px;
+
+min-width:330px;
+
+background:#171C27;
+
+border-left:5px solid var(--primary);
+
+border-radius:18px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+transform:translateX(420px);
+
+transition:.4s;
+
+z-index:999999;
+
+}
+
+.toast.show{
+
+transform:translateX(0);
+
+}
+
+.toast-icon{
+
+font-size:28px;
+
+}
+
+.toast-content h4{
+
+margin-bottom:5px;
+
+}
+
+.toast-content p{
+
+color:var(--text2);
+
+font-size:14px;
+
+}
+
+#backToTop{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:58px;
+
+height:58px;
+
+border:none;
+
+border-radius:50%;
+
+background:var(--primary);
+
+color:#111;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.35s;
+
+box-shadow:0 12px 35px rgba(255,193,7,.3);
+
+z-index:9999;
+
+}
+
+#backToTop.show{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+#backToTop:hover{
+
+transform:translateY(-5px);
+
+}/* ==========================================
+   APP.JS DEL 4
+========================================== */
+
+.header-active{
+
+background:rgba(8,10,15,.96)!important;
+
+backdrop-filter:blur(25px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/* Ripple */
+
+.primary-btn,
+.secondary-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.4);
+
+transform:scale(0);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(5);
+
+opacity:0;
+
+}
+}/* ==========================================
+   APP.JS DEL 5
+========================================== */
+
+body{
+
+opacity:0;
+
+transition:opacity .5s ease;
+
+}
+
+body.page-loaded{
+
+opacity:1;
+
+}/* ==================================================
+   BOOKING PAGE
+================================================== */
+
+.booking-page{
+
+display:grid;
+
+grid-template-columns:430px 1fr;
+
+min-height:100vh;
+
+padding-top:85px;
+
+background:#0B0F17;
+
+}
+
+/* ===========================
+   LEFT SIDE
+=========================== */
+
+.booking-left{
+
+padding:45px;
+
+background:#10151F;
+
+border-right:1px solid rgba(255,255,255,.06);
+
+overflow-y:auto;
+
+}
+
+.booking-left h1{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+font-weight:800;
+
+}
+
+.booking-left p{
+
+color:var(--text2);
+
+margin-bottom:35px;
+
+line-height:1.8;
+
+}
+
+.booking-form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.booking-form input{
+
+height:60px;
+
+padding:0 18px;
+
+border:none;
+
+border-radius:16px;
+
+background:#171C27;
+
+color:white;
+
+font-size:16px;
+
+transition:.3s;
+
+}
+
+.booking-form input:focus{
+
+outline:none;
+
+box-shadow:0 0 0 2px var(--primary);
+
+}
+
+#currentLocation{
+
+height:58px;
+
+border:none;
+
+border-radius:16px;
+
+background:#1E2533;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#currentLocation:hover{
+
+background:#2A3345;
+
+}
+
+.trip-info{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+margin-top:10px;
+
+}
+
+.trip-info div{
+
+background:#171C27;
+
+padding:22px;
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.trip-info div:hover{
+
+transform:translateY(-5px);
+
+}
+
+.trip-info h4{
+
+font-size:14px;
+
+color:var(--text2);
+
+margin-bottom:8px;
+
+}
+
+.trip-info p{
+
+font-size:22px;
+
+font-weight:700;
+
+color:var(--primary);
+
+margin:0;
+
+}
+
+#bookTaxi{
+
+margin-top:20px;
+
+height:60px;
+
+font-size:18px;
+
+}
+
+/* ===========================
+   MAP
+=========================== */
+
+.booking-right{
+
+position:relative;
+
+}
+
+#map{
+
+width:100%;
+
+height:calc(100vh - 85px);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.booking-page{
+
+grid-template-columns:1fr;
+
+}
+
+.booking-left{
+
+border-right:none;
+
+}
+
+#map{
+
+height:500px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.booking-left{
+
+padding:25px;
+
+}
+
+.trip-info{
+
+grid-template-columns:1fr;
+
+}
+
+.booking-left h1{
+
+font-size:32px;
+
+}
+
+}/* ==========================
+   MAP.JS DEL 2
+========================== */
+
+.leaflet-marker-icon{
+
+transition:.3s;
+
+}
+
+.leaflet-marker-icon:hover{
+
+transform:scale(1.08);
+
+}
+
+.leaflet-container{
+
+border-radius:0;
+
+background:#10151F;
+
+}/* ==================================================
+   CUSTOMER DASHBOARD
+================================================== */
+
+.customer-dashboard{
+
+display:grid;
+
+grid-template-columns:420px 1fr;
+
+min-height:100vh;
+
+padding-top:85px;
+
+background:#0B0F17;
+
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+
+.customer-left{
+
+padding:40px;
+
+background:#10151F;
+
+border-right:1px solid rgba(255,255,255,.06);
+
+overflow-y:auto;
+
+}
+
+.customer-left h1{
+
+font-size:42px;
+
+margin-bottom:12px;
+
+font-weight:800;
+
+}
+
+.customer-left>p{
+
+color:var(--text2);
+
+margin-bottom:35px;
+
+}
+
+.trip-status{
+
+background:#171C27;
+
+border-radius:20px;
+
+padding:25px;
+
+margin-bottom:25px;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.trip-status h3{
+
+margin-bottom:12px;
+
+}
+
+#tripStatus{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:10px 18px;
+
+background:rgba(255,193,7,.12);
+
+color:var(--primary);
+
+border-radius:50px;
+
+font-weight:700;
+
+}
+
+.trip-card{
+
+background:#171C27;
+
+border-radius:22px;
+
+padding:28px;
+
+border:1px solid rgba(255,255,255,.06);
+
+margin-bottom:30px;
+
+}
+
+.trip-card h4{
+
+margin-top:20px;
+
+margin-bottom:8px;
+
+font-size:14px;
+
+color:var(--text2);
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+}
+
+.trip-card h4:first-child{
+
+margin-top:0;
+
+}
+
+.trip-card p{
+
+font-size:18px;
+
+font-weight:600;
+
+color:white;
+
+}
+
+/* ===========================
+   MAP
+=========================== */
+
+.customer-right{
+
+position:relative;
+
+}
+
+#customerMap{
+
+width:100%;
+
+height:calc(100vh - 85px);
+
+}
+
+/* ===========================
+   CANCEL BUTTON
+=========================== */
+
+#cancelTrip{
+
+width:100%;
+
+height:58px;
+
+font-size:17px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1100px){
+
+.customer-dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+.customer-left{
+
+border-right:none;
+
+}
+
+#customerMap{
+
+height:500px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.customer-left{
+
+padding:22px;
+
+}
+
+.customer-left h1{
+
+font-size:32px;
+
+}
+
+.trip-card{
+
+padding:20px;
+
+}
+
+}/* ==========================================
+   DRIVER CARD
+========================================== */
+
+.driver-card{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+width:360px;
+
+background:#171C27;
+
+border-radius:22px;
+
+padding:20px;
+
+z-index:999;
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.driver-top{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+margin-bottom:20px;
+
+}
+
+.driver-image{
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#FFC107;
+
+padding:10px;
+
+}
+
+.driver-top h3{
+
+font-size:22px;
+
+margin-bottom:5px;
+
+}
+
+.driver-top p{
+
+color:#BFC7D5;
+
+font-size:15px;
+
+}
+
+.driver-info{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+.driver-info div{
+
+background:#10151F;
+
+padding:15px;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+.driver-info span{
+
+display:block;
+
+font-size:13px;
+
+color:#BFC7D5;
+
+margin-bottom:8px;
+
+}
+
+.driver-info strong{
+
+font-size:22px;
+
+color:#FFC107;
+
+}
+
+.driver-buttons{
+
+display:flex;
+
+gap:12px;
+
+}
+
+.driver-buttons button{
+
+flex:1;
+
+height:50px;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-weight:700;
+
+background:#FFC107;
+
+color:#111;
+
+transition:.3s;
+
+}
+
+.driver-buttons button:hover{
+
+transform:translateY(-3px);
+
+}
+
+@media(max-width:900px){
+
+.driver-card{
+
+position:relative;
+
+width:100%;
+
+left:0;
+
+top:0;
+
+margin-bottom:20px;
+
+}
+
+}/* ==================================================
+   DRIVER DASHBOARD
+================================================== */
+
+.driver-dashboard{
+
+display:grid;
+
+grid-template-columns:420px 1fr;
+
+min-height:100vh;
+
+padding-top:85px;
+
+background:#0B0F17;
+
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+
+.driver-left{
+
+padding:40px;
+
+background:#10151F;
+
+border-right:1px solid rgba(255,255,255,.06);
+
+overflow-y:auto;
+
+}
+
+.driver-left h1{
+
+font-size:40px;
+
+font-weight:800;
+
+margin-bottom:10px;
+
+}
+
+.driver-left p{
+
+color:var(--text2);
+
+margin-bottom:30px;
+
+}
+
+/* STATUS */
+
+.driver-status-card{
+
+background:#171C27;
+
+padding:25px;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,.06);
+
+margin-bottom:25px;
+
+}
+
+.driver-status-card h3{
+
+margin-bottom:15px;
+
+}
+
+#driverOnlineStatus{
+
+display:inline-flex;
+
+align-items:center;
+
+padding:10px 18px;
+
+border-radius:50px;
+
+background:#2D1E08;
+
+color:#FFC107;
+
+font-weight:700;
+
+}
+
+/* TUR */
+
+.trip-request{
+
+background:#171C27;
+
+padding:30px;
+
+border-radius:22px;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.trip-request h3{
+
+margin-bottom:20px;
+
+font-size:24px;
+
+}
+
+.trip-details{
+
+margin-top:20px;
+
+margin-bottom:25px;
+
+}
+
+.trip-details p{
+
+margin-bottom:14px;
+
+font-size:16px;
+
+}
+
+.trip-details span{
+
+color:#FFC107;
+
+font-weight:700;
+
+}
+
+/* BUTTONS */
+
+.driver-actions{
+
+display:flex;
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+.driver-actions button{
+
+flex:1;
+
+height:55px;
+
+}
+
+/* MAP */
+
+.driver-right{
+
+position:relative;
+
+}
+
+#driverMap{
+
+width:100%;
+
+height:calc(100vh - 85px);
+
+}
+
+/* ONLINE BUTTON */
+
+#onlineBtn{
+
+min-width:170px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+.driver-dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+.driver-left{
+
+border-right:none;
+
+}
+
+#driverMap{
+
+height:500px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.driver-left{
+
+padding:22px;
+
+}
+
+.driver-left h1{
+
+font-size:30px;
+
+}
+
+.driver-actions{
+
+flex-direction:column;
+
+}
+
+.driver-actions button{
+
+width:100%;
+
+}
+
+}/* ==========================================
+   DRIVER STATUS
+========================================== */
+
+#driverOnlineStatus{
+
+transition:.3s;
+
+}
+
+.driver-status-online{
+
+background:#163A1F!important;
+
+color:#5CFF8A!important;
+
+}
+
+.driver-status-offline{
+
+background:#3A1717!important;
+
+color:#FF7B7B!important;
+
+}/* ==========================================
+   DRIVER MAP
+========================================== */
+
+#driverMap{
+
+background:#10151F;
+
+}
+
+.leaflet-control-zoom{
+
+border:none!important;
+
+box-shadow:none!important;
+
+}
+
+.leaflet-control-zoom a{
+
+background:#171C27!important;
+
+color:white!important;
+
+border:none!important;
+
+}
+
+.leaflet-popup-content-wrapper{
+
+background:#171C27;
+
+color:white;
+
+border-radius:16px;
+
+}
+
+.leaflet-popup-tip{
+
+background:#171C27;
+
+}

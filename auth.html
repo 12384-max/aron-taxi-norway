@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aron Taxi Norway | Logg inn</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="auth-background">
+
+<div class="auth-overlay"></div>
+
+<div class="auth-card">
+
+<div class="auth-top">
+
+<img src="images/logo.png" alt="Aron Taxi Norway" class="auth-logo">
+
+<h1>Aron Taxi Norway</h1>
+
+<p>Premium Taxi Booking Platform</p>
+
+</div>
+
+<div class="auth-tabs">
+
+<button id="loginTab" class="active">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+Logg inn
+
+</button>
+
+<button id="registerTab">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Registrer
+
+</button>
+
+</div>
+
+<form id="loginForm">
+
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+type="email"
+id="loginEmail"
+placeholder="E-post"
+required>
+
+</div>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="loginPassword"
+placeholder="Passord"
+required>
+
+<button
+type="button"
+class="toggle-password">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+</div>
+
+<button
+class="auth-btn"
+type="submit">
+
+Logg inn
+
+</button>
+
+</form>
+
+<form
+id="registerForm"
+style="display:none;">
+
+<!-- DEL 2 -->
+
+</form>
+
+<div class="auth-footer">
+
+<a href="index.html">
+
+← Tilbake til forsiden
+
+</a>
+
+<div class="contact-info">
+
+<a href="tel:+4796990901">
+
+<i class="fa-solid fa-phone"></i>
+
++47 96 99 09 01
+
+</a>
+
+<a href="mailto:aron.taxi@hotmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+aron.taxi@hotmail.com
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="toast"></div>
+
+<script type="module" src="js/auth.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sjåførportal | Aron Taxi Norway</title>
+
+<link rel="icon" href="images/favicon.png">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<header id="header">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.png" alt="Logo">
+
+<span>Aron Taxi Norway</span>
+
+</a>
+
+</div>
+
+<div class="header-buttons">
+
+<button id="onlineBtn" class="primary-btn">
+
+🟢 Gå Online
+
+</button>
+
+</div>
+
+</header>
+
+<section class="driver-dashboard">
+
+<div class="driver-left">
+
+<h1>Driver Dashboard</h1>
+
+<p id="driverWelcome">
+
+Velkommen tilbake.
+
+</p>
+
+<div class="driver-status-card">
+
+<h3>Status</h3>
+
+<span id="driverOnlineStatus">
+
+🔴 Offline
+
+</span>
+
+</div>
+
+<div class="trip-request">
+
+<h3>Ny tur</h3>
+
+<p>
+
+Ingen aktive forespørsler.
+
+</p>
+
+<div class="trip-details">
+
+<p><strong>Hentested:</strong> <span id="pickupLocation">-</span></p>
+
+<p><strong>Destinasjon:</strong> <span id="destinationLocation">-</span></p>
+
+<p><strong>Pris:</strong> <span id="tripPriceDriver">0 kr</span></p>
+
+</div>
+
+<div class="driver-actions">
+
+<button id="acceptTrip" class="primary-btn">
+
+✅ Godta
+
+</button>
+
+<button id="rejectTrip" class="secondary-btn">
+
+❌ Avslå
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="driver-right">
+
+<div id="driverMap"></div>
+
+</div>
+
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script type="module" src="js/driver.js"></script>
+
+</body>
+
+</html>
